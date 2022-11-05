@@ -7,7 +7,7 @@ const connectDB = require("./helpers/connectDB");
 const app = express();
 
 // connect to database
-connectDB();
+// connectDB();
 
 // middleware
 // app.use(cors());
@@ -16,6 +16,7 @@ app.use(
   "/api",
   graphqlHTTP({
     schema: require("./schema/schema"),
+    // graphiql: true,
     graphiql: process.env.NODE_ENV === "development",
   })
 );
