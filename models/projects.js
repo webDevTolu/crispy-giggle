@@ -13,8 +13,16 @@ const projectSchema = new mongoose.Schema({
   codeUrl: {
     type: String,
   },
+  codeStatus: {
+    type: String,
+    enum: ["PUBLIC", "PRIVATE"],
+  },
   liveUrl: {
     type: String,
+  },
+  liveStatus: {
+    type: String,
+    enum: ["AVAILABLE", "UNAVAILABLE"],
   },
   previewImageUrl: {
     type: String,

@@ -7,7 +7,7 @@ const connectDB = require("./helpers/connectDB");
 const app = express();
 
 // connect to database
-// connectDB();
+connectDB();
 
 // middleware
 // app.use(cors());
